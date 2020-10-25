@@ -1,6 +1,7 @@
 import os
 import pyttsx3
 import datetime
+import random
 import speech_recognition as sr
 
 engine = pyttsx3.init('sapi5')
@@ -58,6 +59,12 @@ def today_date():
     print(date_today)
     speak(f"You are living in {date_today} ")
 
+def play_music():
+    music_path = "C:\\Users\\ARUN\\Music"
+    songs = os.listdir(music_path)
+    choices = random.choice(songs)
+    os.startfile(os.path.join(music_path, choices))
+
 
 if __name__ == "__main__":
     greetings()
@@ -71,3 +78,5 @@ if __name__ == "__main__":
             current_time()
         elif "date" in query:
             today_date()
+        elif "music" in query:
+            play_music()
