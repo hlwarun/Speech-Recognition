@@ -13,4 +13,5 @@ engine.setProperty('voice', voices[1].id)
 
 def speak(sound):
     engine.say(sound)
+    print(sound)
     engine.runAndWait()
