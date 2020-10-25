@@ -63,7 +63,9 @@ def play_music():
     music_path = "C:\\Users\\ARUN\\Music"
     songs = os.listdir(music_path)
     choices = random.choice(songs)
-    os.startfile(os.path.join(music_path, choices))
+    for song in songs:
+        if song.endswith('.mp3'):
+            os.startfile(os.path.join(music_path, choices))
 
 
 if __name__ == "__main__":
@@ -78,5 +80,5 @@ if __name__ == "__main__":
             current_time()
         elif "date" in query:
             today_date()
-        elif "music" in query:
+        elif "music" in query or "song" in query  or "sing" in query or "songs" in query:
             play_music()
