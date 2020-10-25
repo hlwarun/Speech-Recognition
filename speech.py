@@ -53,6 +53,11 @@ def current_time():
     print(timenow)
     speak(f"The time now is {timenow} ")
 
+def today_date():
+    date_today = datetime.datetime.now().date()
+    print(date_today)
+    speak(f"You are living in {date_today} ")
+
 
 if __name__ == "__main__":
     greetings()
@@ -64,3 +69,5 @@ if __name__ == "__main__":
             os.system("start cmd")
         elif "time" in query:
             current_time()
+        elif "date" in query:
+            today_date()
