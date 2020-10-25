@@ -1,4 +1,5 @@
 import pyttsx3
+import datetime
 import speech_recognition as sr
 
 engine = pyttsx3.init('sapi5')
@@ -34,6 +35,16 @@ def listening():
             return 'none'
         return query
 
+def greetings():
+    time = datetime.datetime.now().hour
+    if time < 12:
+        speak('Good morning sir!')
+    elif time >= 12 and time < 17:
+        speak('Good afternoon sir!')
+    else:
+        speak('Good evening sir!')
+    speak('How can I help you?')
+
 
 if __name__ == "__main__":
-    listening()
+    greetings()
