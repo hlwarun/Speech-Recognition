@@ -1,3 +1,4 @@
+import os
 import pyttsx3
 import datetime
 import speech_recognition as sr
@@ -48,3 +49,7 @@ def greetings():
 
 if __name__ == "__main__":
     greetings()
+    if 1:
+        query = listening().lower()
+        if "notepad" in query:
+            os.startfile("C:\\Windows\\System32\\notepad.exe")
