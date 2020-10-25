@@ -53,3 +53,5 @@ if __name__ == "__main__":
         query = listening().lower()
         if "notepad" in query:
             os.startfile("C:\\Windows\\System32\\notepad.exe")
+        elif "command prompt" in query:
+            os.system("start cmd")
