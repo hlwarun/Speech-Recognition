@@ -46,6 +46,13 @@ def greetings():
         speak('Good evening sir!')
     speak('How can I help you?')
 
+def current_time():
+    timenow = datetime.datetime.now()
+    timenow = datetime.datetime.strptime(f"{timenow.hour}:{timenow.minute}", "%H:%M")
+    timenow = timenow.strftime("%I:%M %p")
+    print(timenow)
+    speak(f"The time now is {timenow} ")
+
 
 if __name__ == "__main__":
     greetings()
@@ -55,3 +62,5 @@ if __name__ == "__main__":
             os.startfile("C:\\Windows\\System32\\notepad.exe")
         elif "command prompt" in query:
             os.system("start cmd")
+        elif "time" in query:
+            current_time()
