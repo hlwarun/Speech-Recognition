@@ -21,7 +21,7 @@ if __name__ == "__main__":
             my_ip_address()
         elif "youtube" in query:
             youtube_search()
-        elif "my website" in query:
+        elif "my website" in query or "my portfolio" in query or "portfolio website" in query:
             my_website()
         elif "google" in query:
             google_search()
