@@ -1,10 +1,11 @@
 import os
+import sys
 from device_controllers import *
 from online_controllers import *
 
 if __name__ == "__main__":
     greetings()
-    if 1:
+    while True:
         query = listening().lower()
         if "command prompt" in query:
             os.system("start cmd")
@@ -26,3 +27,7 @@ if __name__ == "__main__":
             google_search()
         elif "wikipedia" in query:
             wikipedia_search(query)
+        elif "exit" in query or "quit" in query or "sleep" in query:
+            speak("It was fun working with you! See you soon.")
+            sys.exit()
+        speak("Do you want me to go on, or should i quit?")
