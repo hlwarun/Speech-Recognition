@@ -22,5 +22,7 @@ if __name__ == "__main__":
             youtube_search()
         elif "my website" in query:
             my_website()
+        elif "google" in query:
+            google_search()
         elif "wikipedia" in query:
             wikipedia_search(query)
