@@ -30,4 +30,6 @@ if __name__ == "__main__":
         elif "exit" in query or "quit" in query or "sleep" in query:
             speak("It was fun working with you! See you soon.")
             sys.exit()
+        elif "send email" in query:
+            send_email()
         speak("Do you want me to go on, or should i quit?")
