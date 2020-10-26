@@ -1,5 +1,6 @@
 import requests
 import wikipedia
+import webbrowser
 from engines import *
 
 def my_ip_address():
@@ -11,3 +12,7 @@ def wikipedia_search(query):
     query = query.replace('wikipedia', "")
     result = wikipedia.summary(query, sentences=3)
     speak(f"According to wikipedia, {result}.")
+
+def my_website():
+    speak("Keep patience, we are connecting...")
+    webbrowser.open("ghimirearun.com.np")

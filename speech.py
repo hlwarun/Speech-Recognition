@@ -6,10 +6,10 @@ if __name__ == "__main__":
     greetings()
     if 1:
         query = listening().lower()
-        if "notepad" in query:
-            os.startfile("C:\\Windows\\System32\\notepad.exe")
-        elif "command prompt" in query:
+        if "command prompt" in query:
             os.system("start cmd")
+        elif "notepad" in query:
+            os.startfile("C:\\Windows\\System32\\notepad.exe")
         elif "time" in query:
             current_time()
         elif "date" in query:
@@ -18,5 +18,7 @@ if __name__ == "__main__":
             play_music()
         elif "ip address" in query:
             my_ip_address()
+        elif "my website" in query:
+            my_website()
         elif "wikipedia" in query:
             wikipedia_search(query)
