@@ -13,6 +13,10 @@ def wikipedia_search(query):
     result = wikipedia.summary(query, sentences=3)
     speak(f"According to wikipedia, {result}.")
 
+def youtube_search():
+    speak("Keep patience, we are connecting...")
+    webbrowser.open("youtube.com")
+
 def my_website():
     speak("Keep patience, we are connecting...")
     webbrowser.open("ghimirearun.com.np")

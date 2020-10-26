@@ -18,6 +18,8 @@ if __name__ == "__main__":
             play_music()
         elif "ip address" in query:
             my_ip_address()
+        elif "youtube" in query:
+            youtube_search()
         elif "my website" in query:
             my_website()
         elif "wikipedia" in query:
